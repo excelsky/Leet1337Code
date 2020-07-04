@@ -1,4 +1,3 @@
-import math
 # class Solution:
     # def nthUglyNumber(self, n: int) -> int:
 def nthUglyNumber(n):
