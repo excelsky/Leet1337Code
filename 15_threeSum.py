@@ -10,7 +10,8 @@ def threeSum(nums):
             break #[7]
         if i > 0 and nums[i] == nums[i-1]:
             continue #[1]
-        l, r = i+1, n-1 #[2]
+        l= i+1
+        r = n-1 #[2]
         while l < r:
             total = nums[i] + nums[l] + nums[r]
             if total < 0: #[3]
