@@ -13,7 +13,5 @@ def topKFrequent(nums, k):
     return [i[0] for i in x]
 
 
-'''
-Input: nums = [1,1,1,2,2,3], k = 2
-Output: [1,2]
-'''
+
+assert(topKFrequent(nums = [1,1,1,2,2,3], k = 2)) == [1,2]
