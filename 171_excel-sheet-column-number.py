@@ -4,7 +4,7 @@
 def titleToNumber(s):
     n = len(s)
     ans = 0
-    for index, letter in enumerate(list(s)):
+    for index, letter in enumerate(s):
         jarisu = n - index - 1
         ans += (ord(letter)-64) * 26 ** jarisu
     return ans
