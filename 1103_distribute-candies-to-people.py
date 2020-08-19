@@ -12,7 +12,7 @@ def distributeCandies(candies, num_people):
         candies -= candy
         candy += 1
         i += 1
-        if i == len(ans):
+        if i == num_people:
             i = 0
     return ans
 
