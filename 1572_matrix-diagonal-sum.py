@@ -2,10 +2,8 @@
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
         n = len(mat)
-        if n == 1:
-            return mat[0][0]
         if n <= 1:
-            return mat[0]
+            return mat[0][0]
         diag1, diag2 = 0, 0
         for row in range(len(mat)):
             diag1 += mat[row][row]
