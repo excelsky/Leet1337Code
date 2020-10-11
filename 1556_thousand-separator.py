@@ -2,28 +2,29 @@
 # class Solution:
 #     def thousandSeparator(self, n: int) -> str:
 def thousandSeparator(n):
-    # Convert to string
+    # Assign variables
     s = str(n)
-    # Edge case
-    if len(s) <= 3:
+    reversed_s = s[::-1]
+    length = len(reversed_s)
+
+    # Check the case when a thousand seperator is not needed
+    if length <= 3:
         return s
-    increment = -3
-    ans = s[increment:]
-    # print(ans)
-    prev = len(s)
-    for i in range(increment, -len(s)-increment, increment):
-        print("\ni: ", i)
-        left_of_dot = s[i:prev]
-        print("left_of_dot: ", left_of_dot)
-        print("ans: ", ans)
-        ans = left_of_dot + "." + ans
-        if prev == len(s):
-            prev = increment
-        else:
-            prev -= i
-    return ans
 
+    # Assign answer variable from the reversed string
+    ans = reversed_s[0]
+    # Loop through [1, length of the string)
+    for i in range(1, length):
+        ans += reversed_s[i]
+        # Add a thousand seperator
+        if i % 3 == 2 and i + 1 != length:
+            ans += "."
 
+    # Return as regular (aka non-reverse)
+    return ans[::-1]
+    
 
-print(thousandSeparator(1234))
-# print(thousandSeparator(123456789))
+assert(thousandSeparator(987)) == "987"
+assert(thousandSeparator(1234)) == "1.234"
+assert(thousandSeparator(123456789)) == "123.456.789"
+assert(thousandSeparator(0)) == "0"
