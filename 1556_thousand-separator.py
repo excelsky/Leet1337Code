@@ -7,7 +7,7 @@ def thousandSeparator(n):
     reversed_s = s[::-1]
     length = len(reversed_s)
 
-    # Check the case when a thousand seperator is not needed
+    # Check the case when a thousand separator is not needed
     if length <= 3:
         return s
 
@@ -16,7 +16,7 @@ def thousandSeparator(n):
     # Loop through [1, length of the string)
     for i in range(1, length):
         ans += reversed_s[i]
-        # Add a thousand seperator
+        # Add a thousand separator
         if i % 3 == 2 and i + 1 != length:
             ans += "."
 
