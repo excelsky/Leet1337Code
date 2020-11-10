@@ -13,5 +13,16 @@ def flipAndInvertImage(A):
             # B[row][col] = 1 - B[row][col]
     return B
 
+
+    # # Copy B from A, the shallow copy
+    # B = [row[:] for row in A]
+    # for row in range(len(A)):
+    #     # Flip
+    #     B[row] = A[row][::-1]
+    #     for col in range(len(A[row])):
+    #         # Invert
+    #         B[row][col] = 1 - B[row][col]
+    # return B
+
 A = [[1,1,0],[1,0,1],[0,0,0]]
 print(flipAndInvertImage(A))
