@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "vector": "c",
+        "iosfwd": "c",
+        "iterator": "c",
+        "__functional_03": "c",
+        "functional": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
